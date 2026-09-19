@@ -1,1 +1,179 @@
-.consult-modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:20px;visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s}.consult-modal.is-open{visibility:visible;opacity:1}.consult-modal-backdrop{position:absolute;inset:0;background:rgba(3,22,58,.58)}.consult-modal-panel{position:relative;width:min(100%,520px);max-height:calc(100dvh - 40px);overflow:auto;padding:34px;background:#fff;border-radius:16px;box-shadow:0 22px 60px rgba(1,21,55,.3);transform:translateY(8px);transition:transform .2s}.consult-modal.is-open .consult-modal-panel{transform:translateY(0)}.consult-modal-close{position:absolute;top:13px;right:13px;width:40px;height:40px;border:0;border-radius:8px;background:#edf4ff;color:#0b3b91;font-size:1.8rem;line-height:1;cursor:pointer}.consult-modal-kicker{margin-bottom:6px;color:#0b3b91;font-size:.75rem;font-weight:800;letter-spacing:.08em}.consult-modal h2{margin:0 0 8px;color:#142d5b;font-size:1.7rem;line-height:1.25}.consult-modal>p,.consult-modal-panel>p{margin:0 0 22px;color:#61708a;font-size:.94rem}.consult-modal form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.consult-modal label{color:#263a61;font-size:.82rem;font-weight:650}.consult-modal label span{font-weight:400}.consult-modal input,.consult-modal select{display:block;width:100%;margin-top:6px;border:1px solid #cbd7ea;border-radius:8px;background:#fff;color:#182d56;padding:11px 12px;font:400 .94rem 'Be Vietnam Pro',Arial,sans-serif}.consult-modal input:focus,.consult-modal select:focus{border-color:#0b3b91;outline:3px solid #dceaff}.consult-consent{grid-column:1/-1;display:flex;gap:9px;align-items:flex-start;padding-top:2px;font-weight:500!important}.consult-consent input{width:17px;height:17px;margin:3px 0 0}.consult-submit{grid-column:1/-1;min-height:46px;border:0;border-radius:8px;background:#0b3b91;color:#fff;font:700 .92rem 'Be Vietnam Pro',Arial,sans-serif;cursor:pointer;transition:background .18s}.consult-submit:hover{background:#082d70}.consult-form-message{grid-column:1/-1;margin:0;color:#17643b;font-size:.87rem;font-weight:600}.consult-locked{overflow:hidden}@media(max-width:560px){.consult-modal{padding:12px}.consult-modal-panel{padding:30px 20px 22px;border-radius:13px}.consult-modal form{grid-template-columns:1fr}.consult-modal label{grid-column:auto}.consult-consent,.consult-submit,.consult-form-message{grid-column:auto}}
+.consult-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s
+}
+
+.consult-modal.is-open {
+    visibility: visible;
+    opacity: 1
+}
+
+.consult-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 22, 58, .58)
+}
+
+.consult-modal-panel {
+    position: relative;
+    width: min(100%, 520px);
+    max-height: calc(100dvh - 40px);
+    overflow: auto;
+    padding: 34px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 22px 60px rgba(1, 21, 55, .3);
+    transform: translateY(8px);
+    transition: transform .2s
+}
+
+.consult-modal.is-open .consult-modal-panel {
+    transform: translateY(0)
+}
+
+.consult-modal-close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    background: #edf4ff;
+    color: #0b3b91;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer
+}
+
+.consult-modal-kicker {
+    margin-bottom: 6px;
+    color: #0b3b91;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .08em
+}
+
+.consult-modal h2 {
+    margin: 0 0 8px;
+    color: #142d5b;
+    font-size: 1.7rem;
+    line-height: 1.25
+}
+
+.consult-modal>p,
+.consult-modal-panel>p {
+    margin: 0 0 22px;
+    color: #61708a;
+    font-size: .94rem
+}
+
+.consult-modal form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px
+}
+
+.consult-modal label {
+    color: #263a61;
+    font-size: .82rem;
+    font-weight: 650
+}
+
+.consult-modal label span {
+    font-weight: 400
+}
+
+.consult-modal input,
+.consult-modal select {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid #cbd7ea;
+    border-radius: 8px;
+    background: #fff;
+    color: #182d56;
+    padding: 11px 12px;
+    font: 400 .94rem 'Be Vietnam Pro', Arial, sans-serif
+}
+
+.consult-modal input:focus,
+.consult-modal select:focus {
+    border-color: #0b3b91;
+    outline: 3px solid #dceaff
+}
+
+.consult-consent {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    padding-top: 2px;
+    font-weight: 500 !important
+}
+
+.consult-consent input {
+    width: 17px;
+    height: 17px;
+    margin: 3px 0 0
+}
+
+.consult-submit {
+    grid-column: 1/-1;
+    min-height: 46px;
+    border: 0;
+    border-radius: 8px;
+    background: #0b3b91;
+    color: #fff;
+    font: 700 .92rem 'Be Vietnam Pro', Arial, sans-serif;
+    cursor: pointer;
+    transition: background .18s
+}
+
+.consult-submit:hover {
+    background: #082d70
+}
+
+.consult-form-message {
+    grid-column: 1/-1;
+    margin: 0;
+    color: #17643b;
+    font-size: .87rem;
+    font-weight: 600
+}
+
+.consult-locked {
+    overflow: hidden
+}
+
+@media(max-width:560px) {
+    .consult-modal {
+        padding: 12px
+    }
+
+    .consult-modal-panel {
+        padding: 30px 20px 22px;
+        border-radius: 13px
+    }
+
+    .consult-modal form {
+        grid-template-columns: 1fr
+    }
+
+    .consult-modal label {
+        grid-column: auto
+    }
+
+    .consult-consent,
+    .consult-submit,
+    .consult-form-message {
+        grid-column: auto
+    }
+}
