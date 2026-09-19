@@ -1,6 +1,6 @@
 const navigation = [
   { label: 'Trang chủ', href: 'index.html' },
-  { label: 'Giới thiệu', href: 'index.html#main' },
+  { label: 'Giới thiệu', href: 'gioi-thieu.html' },
   {
     label: 'Bài thi OTE', children: [
       { label: 'Oxford Test of English (OTE)', href: 'bai-thi-ote.html' },
