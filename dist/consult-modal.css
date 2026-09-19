@@ -75,6 +75,12 @@
     font-size: .94rem
 }
 
+.consult-modal-panel>p a {
+    color: #0b3b91;
+    font-weight: 700;
+    text-decoration: none
+}
+
 .consult-modal form {
     display: grid;
     grid-template-columns: 1fr 1fr;
