@@ -116,11 +116,11 @@
 
 .ukea-footer-logo {
     display: block;
-    width: 230px;
-    height: 98px;
+    width: 260px;
+    max-width: 100%;
+    height: 130px;
     overflow: hidden;
-    border-radius: 8px;
-    background: #fff
+    background: transparent
 }
 
 .ukea-footer-logo span,
@@ -131,8 +131,8 @@
 }
 
 .ukea-footer-logo img {
-    object-fit: cover;
-    object-position: center 50%
+    object-fit: contain;
+    object-position: left center
 }
 
 .ukea-footer-contact {
@@ -155,16 +155,19 @@
 }
 
 .brand-with-logo {
-    width: 150px;
+    width: 164px;
     height: 58px;
-    overflow: hidden
+    overflow: hidden;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: #0b3b91
 }
 
 .brand-with-logo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center 47%
+    object-fit: contain;
+    object-position: center
 }
 
 @media(max-width:700px) {
