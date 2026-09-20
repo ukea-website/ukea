@@ -5,40 +5,248 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/png" href="assets/ukea-favicon.png">
-    <title>Kết quả và chứng chỉ OTE</title>
+    <meta name="description" content="Thông tin về kết quả, chứng chỉ, cấp độ CEFR và bảng quy đổi điểm Oxford Test of English theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam.">
+    <title>Kết quả &amp; Chứng chỉ Oxford Test of English | UKEA</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="results-page.css">
 </head>
 
-<body>
+<body class="results-page">
     <div id="site-header"></div>
     <main id="main">
-        <section class="content-hero">
-            <div class="eyebrow">KẾT QUẢ &amp; CHỨNG CHỈ</div>
-            <h1>Nhận kết quả theo từng kỹ năng</h1>
-            <p>OTE và OTE Advanced đánh giá Nghe, Nói, Đọc và Viết. Kết quả được thông báo theo từng kỹ năng.</p>
-        </section>
-        <article class="section article">
-            <div class="info-grid">
-                <div><b>Nghe &amp; Đọc</b><span>Trong ngày thi</span></div>
-                <div><b>Nói &amp; Viết</b><span>~5 ngày làm việc</span></div>
-                <div><b>OTE</b><span>CEFR A1 – B2</span></div>
-                <div><b>OTE Advanced</b><span>CEFR B2 – C1</span></div>
+        <section class="rp-hero" id="tong-quan">
+            <div class="rp-container rp-hero-grid">
+                <div class="rp-hero-copy">
+                    <nav class="rp-breadcrumb" aria-label="Đường dẫn trang">
+                        <a href="index.html">Trang chủ</a><span aria-hidden="true">/</span><a href="bai-thi-ote.html">Bài thi OTE</a><span aria-hidden="true">/</span><span>Kết quả &amp; Chứng chỉ</span>
+                    </nav>
+                    <div class="rp-eyebrow">KẾT QUẢ &amp; CHỨNG CHỈ</div>
+                    <h1><span class="rp-heading-main">Kết quả &amp; Chứng chỉ</span><span class="rp-heading-accent">Oxford Test of English</span></h1>
+                    <p>Tìm hiểu cách nhận kết quả, cách đọc điểm số, cấp độ CEFR và mức tương đương với Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam.</p>
+                    <div class="rp-actions">
+                        <a class="rp-btn primary" href="#bang-quy-doi">Xem bảng quy đổi</a>
+                        <a class="rp-btn secondary" href="#chung-chi">Xem mẫu chứng chỉ</a>
+                    </div>
+                </div>
+                <div class="rp-document-stack" aria-label="Mẫu phiếu kết quả và chứng chỉ Oxford Test of English">
+                    <button class="rp-doc rp-doc-report" type="button" data-doc-src="assets/module-report-card-sample.png" data-doc-alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English">
+                        <img src="assets/module-report-card-sample.png" alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English">
+                    </button>
+                    <button class="rp-doc rp-doc-ote" type="button" data-doc-src="assets/ote-certificate-sample.png" data-doc-alt="Mẫu chứng chỉ Oxford Test of English">
+                        <img src="assets/ote-certificate-sample.png" alt="Mẫu chứng chỉ Oxford Test of English">
+                    </button>
+                    <button class="rp-doc rp-doc-advanced" type="button" data-doc-src="assets/ote-advanced-certificate-sample.png" data-doc-alt="Mẫu chứng chỉ Oxford Test of English Advanced">
+                        <img src="assets/ote-advanced-certificate-sample.png" alt="Mẫu chứng chỉ Oxford Test of English Advanced">
+                    </button>
+                    <span class="rp-document-note">Nhấn để xem ảnh mẫu</span>
+                </div>
             </div>
-            <h2>Chứng chỉ</h2>
-            <p>Theo UKTA, chứng chỉ có giá trị trọn đời. Tuy nhiên, mỗi tổ chức tiếp nhận (ví dụ trường đại học hoặc đơn
-                vị tuyển dụng) có thể có quy định riêng về thời hạn chứng chỉ được chấp nhận.</p>
-            <h2>Phúc khảo</h2>
-            <p>Nếu không hài lòng với kết quả, thí sinh có thể yêu cầu phúc khảo thông qua trung tâm tổ chức thi. Phí và
-                quy trình do trung tâm thông báo; phúc khảo không làm giảm kết quả ban đầu. Nếu tiếp tục không hài lòng
-                sau phúc khảo, thí sinh có thể kháng nghị qua trung tâm.</p><a class="secondary" target="_blank"
-                rel="noopener" href="https://ukta.edu.vn/phuc-khao/">Xem thông tin phúc khảo tại UKTA ↗</a>
-        </article>
+        </section>
+
+        <nav class="rp-subnav" aria-label="Nội dung trang">
+            <div class="rp-container">
+                <a href="#tong-quan">Tổng quan</a>
+                <a href="#ket-qua">Kết quả</a>
+                <a href="#bang-quy-doi">Bảng quy đổi</a>
+                <a href="#chung-chi">Chứng chỉ</a>
+                <a href="#tai-lieu">Tài liệu</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </nav>
+
+        <section class="rp-section" aria-labelledby="result-time-title">
+            <div class="rp-container">
+                <div class="rp-section-heading centered">
+                    <div class="rp-eyebrow">KẾT QUẢ BÀI THI</div>
+                    <h2 id="result-time-title">Khi nào bạn nhận được kết quả?</h2>
+                    <p>Kết quả được cập nhật theo cơ chế chấm của từng nhóm kỹ năng.</p>
+                </div>
+                <div class="rp-result-cards">
+                    <article class="rp-result-card">
+                        <span class="rp-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12v-1a7 7 0 0 1 14 0v1M5 12H3v6h4v-6Zm14 0h2v6h-4v-6Z"/><path d="M12 19h5"/></svg></span>
+                        <div><span>LISTENING &amp; READING</span><h3>Kết quả trong ngày thi</h3><p>Hai module được chấm tự động; kết quả thường có trong tài khoản sau khi hoàn thành phiên thi.</p></div>
+                    </article>
+                    <article class="rp-result-card">
+                        <span class="rp-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M6 10.5a6 6 0 0 0 12 0M12 16.5V21M9 21h6"/></svg></span>
+                        <div><span>SPEAKING &amp; WRITING</span><h3>Kết quả sau khi chấm thi</h3><p>Hai module được giám khảo chấm; kết quả thường được cập nhật trong vòng 5 ngày làm việc.</p></div>
+                    </article>
+                </div>
+                <p class="rp-source-note">Thời gian thực tế có thể thay đổi nếu kết quả cần được kiểm tra thêm theo quy trình bảo đảm chất lượng.</p>
+
+                <div class="rp-timeline" aria-label="Quy trình nhận kết quả">
+                    <div><b>01</b><span>Hoàn thành<br>bài thi</span></div>
+                    <div><b>02</b><span>Kết quả được<br>cập nhật</span></div>
+                    <div><b>03</b><span>Nhận<br>thông báo</span></div>
+                    <div><b>04</b><span>Đăng nhập<br>tài khoản Oxford</span></div>
+                    <div><b>05</b><span>Xem hoặc tải<br>kết quả</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rp-section rp-soft" id="ket-qua" aria-labelledby="understand-title">
+            <div class="rp-container">
+                <div class="rp-section-heading">
+                    <div class="rp-eyebrow">UNDERSTAND YOUR RESULTS</div>
+                    <h2 id="understand-title">Hiểu kết quả Oxford Test of English</h2>
+                    <p>Mỗi module thể hiện điểm số và cấp độ CEFR của kỹ năng tương ứng. Khi có đủ bốn module, chứng chỉ có thể hiển thị kết quả tổng thể.</p>
+                </div>
+                <div class="rp-skill-grid">
+                    <article><span>01</span><h3>Speaking</h3><p>Điểm kỹ năng<br>Cấp độ CEFR</p></article>
+                    <article><span>02</span><h3>Listening</h3><p>Điểm kỹ năng<br>Cấp độ CEFR</p></article>
+                    <article><span>03</span><h3>Reading</h3><p>Điểm kỹ năng<br>Cấp độ CEFR</p></article>
+                    <article><span>04</span><h3>Writing</h3><p>Điểm kỹ năng<br>Cấp độ CEFR</p></article>
+                </div>
+                <div class="rp-overall">
+                    <span>OVERALL RESULT</span>
+                    <div><h3>Kết quả tổng thể</h3><p>Điểm tổng thể và cấp độ tổng thể được thể hiện khi thí sinh có kết quả ở cả bốn module theo quy định của bài thi.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rp-section" aria-labelledby="compare-title">
+            <div class="rp-container">
+                <div class="rp-section-heading centered">
+                    <div class="rp-eyebrow">RESULT DOCUMENTS</div>
+                    <h2 id="compare-title">Phiếu kết quả và Chứng chỉ khác nhau như thế nào?</h2>
+                </div>
+                <div class="rp-compare-grid">
+                    <article class="rp-compare-card">
+                        <button class="rp-compare-image" type="button" data-doc-src="assets/module-report-card-sample.png" data-doc-alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English"><img src="assets/module-report-card-sample.png" alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English" loading="lazy"></button>
+                        <div><span>MODULE REPORT CARD</span><h3>Phiếu báo cáo từng kỹ năng</h3><ul><li>Dành cho module đã hoàn thành.</li><li>Hiển thị điểm và cấp độ của kỹ năng tương ứng.</li><li>Không thay thế chứng chỉ hoàn chỉnh của bốn kỹ năng.</li></ul><button class="rp-text-button" type="button" data-doc-src="assets/module-report-card-sample.png" data-doc-alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English">Xem mẫu phiếu kết quả →</button></div>
+                    </article>
+                    <article class="rp-compare-card">
+                        <button class="rp-compare-image" type="button" data-doc-src="assets/ote-certificate-sample.png" data-doc-alt="Mẫu chứng chỉ Oxford Test of English"><img src="assets/ote-certificate-sample.png" alt="Mẫu chứng chỉ Oxford Test of English" loading="lazy"></button>
+                        <div><span>OTE CERTIFICATE</span><h3>Chứng chỉ hoàn chỉnh</h3><ul><li>Được cấp khi có kết quả ở cả bốn module.</li><li>Thể hiện kết quả của từng kỹ năng.</li><li>Hiển thị overall score và CEFR level khi áp dụng.</li></ul><button class="rp-text-button" type="button" data-doc-src="assets/ote-certificate-sample.png" data-doc-alt="Mẫu chứng chỉ Oxford Test of English">Xem mẫu chứng chỉ →</button></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="rp-section rp-conversion-section" id="bang-quy-doi" aria-labelledby="conversion-title">
+            <div class="rp-container">
+                <div class="rp-section-heading centered light">
+                    <div class="rp-eyebrow">QUYẾT ĐỊNH 1429/QĐ-BGDĐT</div>
+                    <h2 id="conversion-title">Bảng quy đổi điểm OTE</h2>
+                    <p>Đối chiếu điểm Oxford Test of English, CEFR và Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam.</p>
+                </div>
+                <div class="rp-table-card rp-table-desktop">
+                    <table>
+                        <thead><tr><th>Điểm OTE</th><th>OTE Advanced</th><th>CEFR</th><th>Khung NLNN Việt Nam</th></tr></thead>
+                        <tbody>
+                            <tr><td>—</td><td>141–170</td><td><span class="rp-cefr">C1</span></td><td><strong>Bậc 5</strong></td></tr>
+                            <tr><td>111–140</td><td>111–140</td><td><span class="rp-cefr">B2</span></td><td><strong>Bậc 4</strong></td></tr>
+                            <tr><td>81–110</td><td>—</td><td><span class="rp-cefr">B1</span></td><td><strong>Bậc 3</strong></td></tr>
+                            <tr><td>51–80</td><td>—</td><td><span class="rp-cefr">A2</span></td><td><strong>Bậc 2</strong></td></tr>
+                            <tr><td>21–50</td><td>—</td><td><span class="rp-cefr">A1</span></td><td><strong>Bậc 1</strong></td></tr>
+                            <tr><td>0–20</td><td>—</td><td>—</td><td>—</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rp-conversion-cards" aria-label="Bảng quy đổi trên thiết bị di động">
+                    <article><h3>Bậc 5</h3><dl><div><dt>CEFR</dt><dd>C1</dd></div><div><dt>OTE</dt><dd>—</dd></div><div><dt>Advanced</dt><dd>141–170</dd></div></dl></article>
+                    <article><h3>Bậc 4</h3><dl><div><dt>CEFR</dt><dd>B2</dd></div><div><dt>OTE</dt><dd>111–140</dd></div><div><dt>Advanced</dt><dd>111–140</dd></div></dl></article>
+                    <article><h3>Bậc 3</h3><dl><div><dt>CEFR</dt><dd>B1</dd></div><div><dt>OTE</dt><dd>81–110</dd></div><div><dt>Advanced</dt><dd>—</dd></div></dl></article>
+                    <article><h3>Bậc 2</h3><dl><div><dt>CEFR</dt><dd>A2</dd></div><div><dt>OTE</dt><dd>51–80</dd></div><div><dt>Advanced</dt><dd>—</dd></div></dl></article>
+                    <article><h3>Bậc 1</h3><dl><div><dt>CEFR</dt><dd>A1</dd></div><div><dt>OTE</dt><dd>21–50</dd></div><div><dt>Advanced</dt><dd>—</dd></div></dl></article>
+                    <article class="muted"><h3>Chưa quy đổi</h3><dl><div><dt>CEFR</dt><dd>—</dd></div><div><dt>OTE</dt><dd>0–20</dd></div><div><dt>Advanced</dt><dd>—</dd></div></dl></article>
+                </div>
+                <div class="rp-legal-callout">
+                    <div><span>VĂN BẢN CÔNG NHẬN</span><h3>Quyết định 1429/QĐ-BGDĐT</h3><p>Các cấp độ OTE và OTE Advanced được công nhận tương đương với các bậc của Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam trong phạm vi quy định tại Quyết định.</p></div>
+                    <a class="rp-btn secondary light" href="documents/quyet-dinh-1429-qd-bgddt.pdf" target="_blank" rel="noopener noreferrer">Xem Quyết định 1429 →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="rp-section" aria-labelledby="report-title">
+            <div class="rp-container rp-feature-layout">
+                <button class="rp-feature-document" type="button" data-doc-src="assets/module-report-card-sample.png" data-doc-alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English"><img src="assets/module-report-card-sample.png" alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English" loading="lazy"></button>
+                <div class="rp-feature-copy">
+                    <div class="rp-eyebrow">RESULT REPORT</div>
+                    <h2 id="report-title">Báo cáo kết quả từng kỹ năng</h2>
+                    <h3>Module Report Card</h3>
+                    <p>Sau mỗi module đã tham dự, thí sinh có thể xem Phiếu báo cáo tương ứng trong hệ thống Oxford.</p>
+                    <ul class="rp-check-list"><li>Kết quả module đã tham dự</li><li>Điểm số của kỹ năng</li><li>Cấp độ CEFR tương ứng</li><li>Có thể xem, lưu hoặc in từ tài khoản Oxford</li></ul>
+                    <button class="rp-btn secondary" type="button" data-doc-src="assets/module-report-card-sample.png" data-doc-alt="Mẫu Phiếu báo cáo kết quả từng kỹ năng Oxford Test of English">Xem mẫu Phiếu kết quả</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="rp-section rp-soft" id="chung-chi" aria-labelledby="certificate-title">
+            <div class="rp-container">
+                <div class="rp-section-heading centered">
+                    <div class="rp-eyebrow">CERTIFICATE</div>
+                    <h2 id="certificate-title">Chứng chỉ Oxford Test of English</h2>
+                    <p>Khi có kết quả ở cả bốn module, chứng chỉ điện tử thể hiện điểm từng kỹ năng, kết quả tổng thể và cấp độ CEFR khi áp dụng.</p>
+                </div>
+                <div class="rp-certificate-tabs">
+                    <div class="rp-tab-list" role="tablist" aria-label="Chọn mẫu chứng chỉ">
+                        <button role="tab" id="tab-ote" aria-controls="panel-ote" aria-selected="true" tabindex="0">Oxford Test of English</button>
+                        <button role="tab" id="tab-advanced" aria-controls="panel-advanced" aria-selected="false" tabindex="-1">OTE Advanced</button>
+                    </div>
+                    <div class="rp-tab-panel" id="panel-ote" role="tabpanel" aria-labelledby="tab-ote">
+                        <button type="button" data-doc-src="assets/ote-certificate-sample.png" data-doc-alt="Mẫu chứng chỉ Oxford Test of English"><img src="assets/ote-certificate-sample.png" alt="Mẫu chứng chỉ Oxford Test of English" loading="lazy"></button>
+                        <div><h3>Oxford Test of English Certificate</h3><ul class="rp-check-list"><li>Kết quả từng kỹ năng</li><li>Overall result khi áp dụng</li><li>Cấp độ CEFR</li><li>Chứng chỉ điện tử có thể tải xuống</li></ul></div>
+                    </div>
+                    <div class="rp-tab-panel" id="panel-advanced" role="tabpanel" aria-labelledby="tab-advanced" hidden>
+                        <button type="button" data-doc-src="assets/ote-advanced-certificate-sample.png" data-doc-alt="Mẫu chứng chỉ Oxford Test of English Advanced"><img src="assets/ote-advanced-certificate-sample.png" alt="Mẫu chứng chỉ Oxford Test of English Advanced" loading="lazy"></button>
+                        <div><h3>Oxford Test of English Advanced Certificate</h3><ul class="rp-check-list"><li>Kết quả từng kỹ năng Advanced</li><li>Overall result khi áp dụng</li><li>Cấp độ CEFR B2–C1</li><li>Chứng chỉ điện tử có thể tải xuống</li></ul></div>
+                    </div>
+                </div>
+                <div class="rp-info-grid">
+                    <article><span>XÁC MINH CHỨNG CHỈ</span><h3>Xác minh kết quả trực tuyến</h3><p>Tổ chức tiếp nhận có thể sử dụng dịch vụ xác minh kết quả chính thức của Oxford.</p><a href="https://go.oup.com/oxfordtestofenglish/verify" target="_blank" rel="noopener noreferrer">Xác minh chứng chỉ →</a></article>
+                    <article><span>THỜI HẠN KẾT QUẢ</span><h3>Kết quả OTE có thời hạn bao lâu?</h3><p>Kết quả OTE không có ngày hết hạn do Oxford quy định. Tuy nhiên, trường học hoặc tổ chức tiếp nhận có thể yêu cầu kết quả được cấp trong một khoảng thời gian nhất định.</p></article>
+                </div>
+                <aside class="rp-important-note"><strong>Lưu ý</strong><p>Yêu cầu về cấp độ, điểm số, từng kỹ năng và thời gian kể từ ngày thi có thể khác nhau. Hãy kiểm tra trực tiếp với trường, chương trình hoặc tổ chức tiếp nhận trước khi đăng ký thi.</p></aside>
+            </div>
+        </section>
+
+        <section class="rp-section" id="tai-lieu" aria-labelledby="downloads-title">
+            <div class="rp-container">
+                <div class="rp-section-heading centered">
+                    <div class="rp-eyebrow">TÀI LIỆU THAM KHẢO</div>
+                    <h2 id="downloads-title">Tải tài liệu mẫu</h2>
+                    <p>Các tệp dưới đây là ảnh mẫu do UKEA cung cấp để tham khảo hình thức tài liệu.</p>
+                </div>
+                <div class="rp-download-grid">
+                    <article><b>01</b><span>PNG</span><h3>Mẫu chứng chỉ<br>Oxford Test of English</h3><a href="assets/ote-certificate-sample.png" download>Tải ảnh mẫu ↓</a></article>
+                    <article><b>02</b><span>PNG</span><h3>Mẫu chứng chỉ<br>OTE Advanced</h3><a href="assets/ote-advanced-certificate-sample.png" download>Tải ảnh mẫu ↓</a></article>
+                    <article><b>03</b><span>PNG</span><h3>Mẫu Phiếu báo cáo<br>kết quả từng kỹ năng</h3><a href="assets/module-report-card-sample.png" download>Tải ảnh mẫu ↓</a></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="rp-section rp-soft" id="faq" aria-labelledby="faq-title">
+            <div class="rp-container rp-faq-layout">
+                <div class="rp-section-heading"><div class="rp-eyebrow">FAQ</div><h2 id="faq-title">Câu hỏi thường gặp về kết quả &amp; chứng chỉ OTE</h2><p>Thông tin ngắn gọn để bạn kiểm tra trước và sau kỳ thi.</p></div>
+                <div class="rp-faq-list">
+                    <details><summary>Khi nào tôi nhận được kết quả OTE?</summary><p>Listening và Reading thường có kết quả trong ngày thi. Speaking và Writing thường được cập nhật trong vòng 5 ngày làm việc sau khi chấm.</p></details>
+                    <details><summary>Module Report Card là gì?</summary><p>Đây là phiếu báo cáo cho module đã tham dự, thể hiện điểm và cấp độ CEFR của kỹ năng tương ứng.</p></details>
+                    <details><summary>Khi nào tôi nhận được chứng chỉ?</summary><p>Chứng chỉ được cung cấp khi thí sinh có kết quả ở cả bốn module của bài thi.</p></details>
+                    <details><summary>Chứng chỉ thể hiện những thông tin gì?</summary><p>Chứng chỉ thể hiện điểm và cấp độ của từng kỹ năng, cùng điểm tổng thể và cấp độ tổng thể khi áp dụng.</p></details>
+                    <details><summary>OTE và OTE Advanced có dùng chung mẫu chứng chỉ không?</summary><p>Mỗi bài thi có mẫu chứng chỉ riêng, phản ánh thang điểm và phạm vi CEFR tương ứng.</p></details>
+                    <details><summary>Điểm OTE tương đương bậc nào của Khung NLNN Việt Nam?</summary><p>Mức tương đương được trình bày trong bảng quy đổi theo Quyết định 1429/QĐ-BGDĐT trên trang này.</p></details>
+                    <details><summary>Chứng chỉ OTE có thời hạn không?</summary><p>Oxford không quy định ngày hết hạn cho kết quả, nhưng từng tổ chức tiếp nhận có thể đặt yêu cầu riêng về thời gian kể từ ngày thi.</p></details>
+                    <details><summary>Làm thế nào để xác minh chứng chỉ?</summary><p>Sử dụng dịch vụ xác minh kết quả chính thức của Oxford và thông tin tham chiếu trên chứng chỉ.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section class="rp-final-cta">
+            <div class="rp-container"><div><span>OXFORD TEST OF ENGLISH</span><h2>Sẵn sàng cho kỳ thi OTE?</h2><p>Tìm địa điểm thi, lựa chọn bài thi phù hợp và chuẩn bị cho Oxford Test of English.</p></div><div class="rp-actions"><a class="rp-btn primary" href="dang-ky.html">Đăng ký dự thi →</a><a class="rp-btn secondary" href="dia-diem-thi.html">Tìm địa điểm thi</a></div></div>
+        </section>
     </main>
     <div id="site-footer"></div>
+
+    <div class="rp-lightbox" id="document-preview" role="dialog" aria-modal="true" aria-labelledby="document-preview-title" aria-hidden="true">
+        <button class="rp-lightbox-backdrop" type="button" aria-label="Đóng ảnh xem trước" data-close-preview></button>
+        <div class="rp-lightbox-panel"><button class="rp-lightbox-close" type="button" aria-label="Đóng" data-close-preview>×</button><h2 id="document-preview-title">Xem tài liệu mẫu</h2><img src="assets/ote-certificate-sample.png" alt=""><p></p></div>
+    </div>
+
     <script src="site-v3.js"></script>
     <script src="nav.js"></script>
     <script src="consult-modal.js"></script>
     <script src="home-locations.js"></script><script src="header-contact.js"></script>
+    <script src="results-page.js"></script>
 </body>
 
 </html>
