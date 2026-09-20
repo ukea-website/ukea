@@ -1,0 +1,223 @@
+:root {
+    --brand-primary: #1b1464;
+    --input-border: #cfd4df;
+    --input-border-hover: #9ca5b8;
+    --input-focus: #1b1464;
+    --input-focus-ring: rgba(27, 20, 100, .10);
+    --input-error: #c83b45;
+    --input-error-ring: rgba(200, 59, 69, .10);
+    --input-success: #26734d;
+    --input-disabled: #f1f3f7;
+    --input-placeholder: #8a92a3;
+}
+
+.ukea-form .ukea-field {
+    position: relative;
+    min-width: 0;
+    padding-bottom: 1.35rem;
+}
+
+.ukea-form .ukea-control {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 52px;
+    margin: 0;
+    padding: 18px 46px 7px 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    background-color: #fff;
+    color: #222536;
+    font: 400 1rem/1.25 'Be Vietnam Pro', Arial, sans-serif;
+    box-shadow: none;
+    appearance: none;
+    transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease;
+}
+
+.ukea-form .ukea-control::placeholder {
+    color: transparent;
+}
+
+.ukea-form .ukea-control:hover:not(:disabled):not(:focus) {
+    border-color: var(--input-border-hover);
+}
+
+.ukea-form .ukea-control:focus,
+.ukea-form .ukea-control:focus-visible {
+    border: 2px solid var(--input-focus);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding-left: 14px;
+    background-color: #fdfdff;
+    box-shadow: 0 0 0 3px var(--input-focus-ring);
+}
+
+.ukea-form .ukea-field label {
+    position: absolute;
+    z-index: 1;
+    top: 26px;
+    left: 15px;
+    max-width: calc(100% - 54px);
+    padding: 0 4px;
+    overflow: hidden;
+    color: #697386;
+    font-size: .94rem;
+    font-weight: 500;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transform-origin: left center;
+    transition: top 200ms ease, color 200ms ease, font-size 200ms ease, transform 200ms ease;
+}
+
+.ukea-form .ukea-field:focus-within label,
+.ukea-form .ukea-control:not(:placeholder-shown) + label,
+.ukea-form .ukea-field--select label,
+.ukea-form .ukea-field--textarea .ukea-control:not(:placeholder-shown) + label {
+    top: 9px;
+    color: var(--brand-primary);
+    font-size: .72rem;
+    font-weight: 700;
+    transform: none;
+}
+
+.ukea-form .ukea-field--select::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #737d90;
+    border-bottom: 2px solid #737d90;
+    pointer-events: none;
+    transform: rotate(45deg);
+    transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.ukea-form .ukea-field--select:focus-within::after {
+    border-color: var(--brand-primary);
+    transform: translateY(4px) rotate(225deg);
+}
+
+.ukea-form textarea.ukea-control {
+    height: auto;
+    min-height: 130px;
+    padding-top: 24px;
+    resize: vertical;
+}
+
+.ukea-form .ukea-field-message {
+    position: absolute;
+    left: 2px;
+    bottom: 0;
+    min-height: 1.15rem;
+    margin: 0;
+    color: var(--input-error);
+    font-size: .76rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.ukea-form .ukea-field.is-invalid .ukea-control {
+    border-color: var(--input-error);
+    box-shadow: 0 0 0 3px var(--input-error-ring);
+}
+
+.ukea-form .ukea-field.is-invalid label {
+    color: var(--input-error);
+}
+
+.ukea-form .ukea-field.is-valid .ukea-control:not(:focus) {
+    border-color: #75a88e;
+}
+
+.ukea-form .ukea-control:disabled,
+.ukea-form .ukea-control[readonly] {
+    border-color: #dfe3ea;
+    background: var(--input-disabled);
+    color: #7c8493;
+    cursor: not-allowed;
+}
+
+.ukea-form .ukea-check-field {
+    grid-column: 1 / -1;
+    min-width: 0;
+    padding-bottom: 1.35rem;
+}
+
+.ukea-form .ukea-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 44px;
+    color: inherit;
+    font-size: .86rem;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.ukea-form .ukea-check input {
+    flex: 0 0 auto;
+    width: 19px;
+    height: 19px;
+    margin: 2px 0 0;
+    accent-color: var(--brand-primary);
+}
+
+.ukea-form .ukea-check input:focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--input-focus-ring);
+}
+
+.ukea-form .ukea-check-field.is-invalid .ukea-check input {
+    outline: 2px solid var(--input-error);
+    outline-offset: 2px;
+}
+
+.ukea-form .ukea-check-field .ukea-field-message {
+    position: static;
+    display: block;
+    margin: -5px 0 0 29px;
+}
+
+.ukea-form input:-webkit-autofill,
+.ukea-form input:-webkit-autofill:hover,
+.ukea-form input:-webkit-autofill:focus,
+.ukea-form textarea:-webkit-autofill,
+.ukea-form select:-webkit-autofill {
+    -webkit-text-fill-color: #222536;
+    caret-color: #222536;
+    box-shadow: 0 0 0 1000px #fff inset, 0 0 0 3px var(--input-focus-ring);
+    transition: background-color 9999s ease-out 0s;
+}
+
+@media (max-width: 560px) {
+    .ukea-form .ukea-control {
+        min-height: 50px;
+        font-size: 16px;
+    }
+
+    .ukea-form .ukea-check {
+        min-height: 44px;
+    }
+}
+
+@media (forced-colors: active) {
+    .ukea-form .ukea-control:focus,
+    .ukea-form .ukea-control:focus-visible {
+        outline: 2px solid CanvasText;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ukea-form .ukea-control,
+    .ukea-form .ukea-field label,
+    .ukea-form .ukea-field--select::after {
+        transition: none;
+    }
+}

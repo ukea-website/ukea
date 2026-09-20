@@ -25,17 +25,36 @@
                 <p>Thông tin được dùng để liên hệ tư vấn về Oxford Test of English. Bạn có thể yêu cầu cập nhật hoặc xóa
                     dữ liệu đã cung cấp.</p>
             </div>
-            <form id="lead-form"><label>Họ và tên<input name="fullName" required autocomplete="name"
-                        placeholder="Nhập họ và tên"></label><label>Số điện thoại<input name="phone" required
-                        autocomplete="tel" inputmode="tel" placeholder="Nhập số điện thoại"></label><label>Địa chỉ
-                    email<input name="email" required type="email" autocomplete="email"
-                        placeholder="Nhập email"></label><label>Nhu cầu tư vấn<select name="interest">
+            <form id="lead-form" class="ukea-form">
+                <div class="ukea-field">
+                    <input class="ukea-control" id="lead-full-name" name="fullName" required autocomplete="name" placeholder=" " aria-describedby="lead-full-name-error">
+                    <label for="lead-full-name">Họ và tên</label>
+                    <span class="ukea-field-message" id="lead-full-name-error" aria-live="polite"></span>
+                </div>
+                <div class="ukea-field">
+                    <input class="ukea-control" id="lead-phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder=" " aria-describedby="lead-phone-error">
+                    <label for="lead-phone">Số điện thoại</label>
+                    <span class="ukea-field-message" id="lead-phone-error" aria-live="polite"></span>
+                </div>
+                <div class="ukea-field">
+                    <input class="ukea-control" id="lead-email" name="email" required type="email" autocomplete="email" placeholder=" " aria-describedby="lead-email-error">
+                    <label for="lead-email">Địa chỉ email</label>
+                    <span class="ukea-field-message" id="lead-email-error" aria-live="polite"></span>
+                </div>
+                <div class="ukea-field ukea-field--select">
+                    <select class="ukea-control" id="lead-interest" name="interest" aria-describedby="lead-interest-error">
                         <option value="OTE">Oxford Test of English</option>
                         <option value="OTE Advanced">OTE Advanced</option>
                         <option value="Chưa xác định">Chưa xác định</option>
-                    </select></label><label class="agree"><input name="consent" required type="checkbox"> Tôi đồng ý để
-                    website lưu thông tin và liên hệ tư vấn về bài thi.</label><button class="primary" type="submit">Gửi
-                    đăng ký →</button>
+                    </select>
+                    <label for="lead-interest">Nhu cầu tư vấn</label>
+                    <span class="ukea-field-message" id="lead-interest-error" aria-live="polite"></span>
+                </div>
+                <div class="ukea-check-field">
+                    <label class="ukea-check" for="lead-consent"><input id="lead-consent" name="consent" required type="checkbox" aria-describedby="lead-consent-error"><span>Tôi đồng ý để website lưu thông tin và liên hệ tư vấn về bài thi.</span></label>
+                    <span class="ukea-field-message" id="lead-consent-error" aria-live="polite"></span>
+                </div>
+                <button class="primary" type="submit">Gửi đăng ký →</button>
                 <p class="form-message" role="status" aria-live="polite"></p>
             </form>
         </section>
