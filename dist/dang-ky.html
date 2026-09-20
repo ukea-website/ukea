@@ -13,19 +13,33 @@
 <body>
     <div id="site-header"></div>
     <main id="main">
-        <section class="content-hero">
-            <div class="eyebrow">ĐĂNG KÝ TƯ VẤN</div>
-            <h1>Nhận tư vấn về bài thi OTE</h1>
-            <p>Để lại thông tin để đội ngũ tư vấn liên hệ hỗ trợ chọn bài thi và chuẩn bị đăng ký.</p>
-        </section>
-        <section class="consult" id="form">
-            <div>
-                <div class="eyebrow">THÔNG TIN HỌC VIÊN</div>
-                <h2>Đăng ký nhận tư vấn</h2>
-                <p>Thông tin được dùng để liên hệ tư vấn về Oxford Test of English. Bạn có thể yêu cầu cập nhật hoặc xóa
-                    dữ liệu đã cung cấp.</p>
-            </div>
-            <form id="lead-form" class="ukea-form">
+        <section class="consult consultation-page" id="form">
+            <div class="consultation-inner">
+                <div class="consultation-copy">
+                    <div class="eyebrow">ĐĂNG KÝ TƯ VẤN</div>
+                    <h1>Nhận tư vấn<br>về bài thi OTE</h1>
+                    <p class="consultation-description">Để lại thông tin để đội ngũ tư vấn liên hệ hỗ trợ chọn bài thi và chuẩn bị đăng ký.</p>
+                    <div class="consultation-benefits" aria-label="Quyền lợi tư vấn">
+                        <div class="consultation-benefit">
+                            <span class="consultation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.5 18.5 4 20l1.2-3.8A8 8 0 1 1 7.5 18.5Z"/><path d="M8 10h8M8 13.5h5"/></svg></span>
+                            <div><h2>Tư vấn 1:1 cùng chuyên gia</h2><p>Giải đáp mọi thắc mắc về bài thi OTE</p></div>
+                        </div>
+                        <div class="consultation-benefit">
+                            <span class="consultation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3.5h7l4 4V20H7Z"/><path d="M14 3.5V8h4M10 12h5M10 15.5h5"/></svg></span>
+                            <div><h2>Hướng dẫn chi tiết</h2><p>Quy trình đăng ký và chuẩn bị bài thi</p></div>
+                        </div>
+                        <div class="consultation-benefit">
+                            <span class="consultation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 12a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM15.5 11a3 3 0 1 0 0-6"/><path d="M2.5 20a6 6 0 0 1 12 0M14 14.5a5 5 0 0 1 7.5 4.3"/></svg></span>
+                            <div><h2>Hỗ trợ nhanh chóng</h2><p>Đồng hành trong suốt quá trình</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="consultation-card">
+                    <div class="consultation-card-heading">
+                        <h2>Thông tin học viên</h2>
+                        <p>Đăng ký nhận tư vấn miễn phí</p>
+                    </div>
+                    <form id="lead-form" class="ukea-form">
                 <div class="ukea-field">
                     <input class="ukea-control" id="lead-full-name" name="fullName" required autocomplete="name" placeholder=" " aria-describedby="lead-full-name-error">
                     <label for="lead-full-name">Họ và tên</label>
@@ -55,8 +69,11 @@
                     <span class="ukea-field-message" id="lead-consent-error" aria-live="polite"></span>
                 </div>
                 <button class="primary" type="submit">Gửi đăng ký →</button>
+                <div class="consultation-trust"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Thông tin của bạn được bảo mật</span></div>
                 <p class="form-message" role="status" aria-live="polite"></p>
-            </form>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     <div id="site-footer"></div>

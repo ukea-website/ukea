@@ -1,6 +1,7 @@
 @import url('nav.css');
 @import url('consult-modal.css');
 @import url('form-ui.css');
+@import url('consultation-redesign.css');
 @import url('home-locations.css');
 @import url('intro.css');
 @import url('intro-v2.css');
@@ -78,7 +79,7 @@
 }
 
 #site-footer footer {
-    background: #201d6c;
+    background: #1b1464;
     color: #fff
 }
 
@@ -113,6 +114,11 @@
 
 .ukea-footer-grid {
     grid-template-columns: minmax(300px, 1.7fr) 1fr 1fr
+}
+
+#site-footer .footer-grid {
+    padding-top: 72px;
+    padding-bottom: 54px
 }
 
 .ukea-footer-logo {
@@ -174,5 +180,10 @@
 @media(max-width:700px) {
     .ukea-footer-grid {
         grid-template-columns: 1fr
+    }
+
+    #site-footer .footer-grid {
+        padding-top: 52px;
+        padding-bottom: 40px
     }
 }
