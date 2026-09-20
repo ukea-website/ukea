@@ -233,8 +233,8 @@
 }
 
 .rp-subnav {
-    position: sticky;
-    top: 111px;
+    position: relative;
+    top: auto;
     z-index: 35;
     border-bottom: 1px solid #e5e8f0;
     background: rgba(255, 255, 255, .96);
@@ -284,7 +284,7 @@
 
 .rp-section {
     padding: 92px 0;
-    scroll-margin-top: 180px;
+    scroll-margin-top: 24px;
 }
 
 .rp-soft {
@@ -1073,10 +1073,6 @@
         margin-inline: auto;
     }
 
-    .rp-subnav {
-        top: 94px;
-    }
-
     .rp-subnav .rp-container {
         justify-content: flex-start;
         overflow-x: auto;
@@ -1149,7 +1145,7 @@
 
     .rp-section {
         padding: 66px 0;
-        scroll-margin-top: 110px;
+        scroll-margin-top: 24px;
     }
 
     .rp-result-cards,
