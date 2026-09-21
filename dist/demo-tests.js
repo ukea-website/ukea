@@ -12,7 +12,7 @@ const demoTests = [
     badge: 'B2–C1',
     title: 'Oxford Test of English Advanced',
     description: 'Phiên bản nâng cao dành cho người cần chứng minh năng lực tiếng Anh ở trình độ B2 và C1.',
-    url: ''
+    url: 'https://oup-elt.assessor.rm.com/engine/index.php/lms/index'
   },
   {
     id: 'ote-for-schools',
