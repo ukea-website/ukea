@@ -3,6 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node -e \"console.log('Using prepared worker output')\""
+    "build": "node -e \"console.log('Using prepared worker output')\"",
+    "db:setup": "node scripts/apply-supabase-schema.mjs",
+    "db:verify": "node scripts/verify-supabase.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.1",
+    "postgres": "^3.4.9"
   }
 }

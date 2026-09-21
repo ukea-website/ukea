@@ -155,6 +155,19 @@
     font-weight: 600
 }
 
+.consult-form-message.is-error {
+    color: #b42318
+}
+
+.consult-form-message.is-success {
+    color: #17643b
+}
+
+.consult-submit:disabled {
+    cursor: wait;
+    opacity: .72
+}
+
 .consult-locked {
     overflow: hidden
 }

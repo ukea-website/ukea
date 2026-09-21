@@ -238,6 +238,19 @@
     text-align: center;
 }
 
+.consultation-card .form-message.is-error {
+    color: #b42318;
+}
+
+.consultation-card .form-message.is-success {
+    color: #26734d;
+}
+
+.consultation-card button[type="submit"]:disabled {
+    cursor: wait;
+    opacity: .72;
+}
+
 @media (max-width: 1000px) {
     .consult.consultation-page {
         padding-top: 76px;

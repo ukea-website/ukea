@@ -2,6 +2,55 @@ const headerCta = document.querySelector('.nav-cta');
 const mobileCta = document.querySelector('.mobile-cta');
 const makeConsultButton = (className, text) => `<button class="${className}" type="button">${text}</button>`;
 
+window.UkeaLeadApi = window.UkeaLeadApi || {
+  async submit(form, message, source) {
+    const submitButton = form.querySelector('[type="submit"]');
+    const originalLabel = submitButton?.textContent;
+    const data = new FormData(form);
+    const payload = {
+      fullName: data.get('fullName'),
+      phone: data.get('phone'),
+      email: data.get('email'),
+      interest: data.get('interest'),
+      consent: data.get('consent') === 'on',
+      source,
+      pageUrl: window.location.href,
+      website: data.get('website') || '',
+    };
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Đang gửi…';
+    }
+    message.classList.remove('is-error', 'is-success');
+    message.textContent = 'Đang gửi thông tin của bạn…';
+
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.message || 'Chưa thể gửi đăng ký.');
+
+      message.classList.add('is-success');
+      message.textContent = 'Cảm ơn bạn! UKEA đã nhận thông tin và sẽ liên hệ sớm.';
+      form.reset();
+      return true;
+    } catch (error) {
+      message.classList.add('is-error');
+      message.textContent = error.message || 'Có lỗi kết nối. Vui lòng thử lại sau.';
+      return false;
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }
+    }
+  },
+};
+
 if (headerCta) headerCta.outerHTML = makeConsultButton('nav-cta consult-trigger', 'Đăng ký tư vấn');
 if (mobileCta) mobileCta.outerHTML = makeConsultButton('mobile-cta consult-trigger', 'Đăng ký tư vấn');
 
@@ -151,10 +200,9 @@ consultModal.addEventListener('keydown', event => {
   }
 });
 
-consultForm.addEventListener('submit', event => {
+consultForm.addEventListener('submit', async event => {
   event.preventDefault();
   const message = consultForm.querySelector('.consult-form-message');
   if (!consultForm.checkValidity()) return;
-  message.textContent = 'Cảm ơn bạn. Thông tin sẽ được lưu ngay khi website kết nối Supabase.';
-  consultForm.reset();
+  await window.UkeaLeadApi.submit(consultForm, message, 'consultation-modal');
 });
