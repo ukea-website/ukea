@@ -1,0 +1,17 @@
+{
+  "name": "UKEA – UK English Academy",
+  "short_name": "UKEA",
+  "description": "Thông tin và tư vấn Oxford Test of English tại Việt Nam.",
+  "lang": "vi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1b1464",
+  "icons": [
+    {
+      "src": "/assets/ukea-favicon.png",
+      "sizes": "1254x1254",
+      "type": "image/png"
+    }
+  ]
+}

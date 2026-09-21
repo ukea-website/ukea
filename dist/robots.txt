@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /quan-tri
+Disallow: /quan-tri/
+
+Sitemap: https://ukea.com.vn/sitemap.xml

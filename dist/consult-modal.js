@@ -61,7 +61,7 @@ document.body.insertAdjacentHTML('beforeend', `
       <button class="consult-modal-close" type="button" aria-label="Đóng biểu mẫu" data-close-consult>×</button>
       <div class="consult-modal-kicker">UKEA • TƯ VẤN BÀI THI OTE</div>
       <h2 id="consult-modal-title">Đăng ký nhận tư vấn</h2>
-      <p>Để lại thông tin, đội ngũ UKEA sẽ hỗ trợ bạn chọn bài thi phù hợp. Hotline: <a href="tel:0989999999">0989 999 999</a>.</p>
+      <p>Để lại thông tin, đội ngũ UKEA sẽ hỗ trợ bạn chọn bài thi phù hợp. Hotline: <a href="tel:0876767396">0876 767 396</a>.</p>
       <form id="consult-modal-form" class="ukea-form" novalidate>
         <div class="ukea-field">
           <input class="ukea-control" id="consult-full-name" name="fullName" autocomplete="name" placeholder=" " required aria-describedby="consult-full-name-error">
