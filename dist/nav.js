@@ -8,7 +8,7 @@ const navigation = [
       { label: 'So sánh các bài thi', href: 'so-sanh.html' },
       { label: 'Kết quả & Chứng chỉ', href: 'ket-qua-chung-chi.html' },
       { label: 'Công nhận quốc tế', href: 'index.html#main' },
-      { label: 'Bài thi mẫu', href: 'bai-thi-ote.html#main' }]
+      { label: 'Bài thi mẫu', href: 'bai-thi-mau.html' }]
   },
   {
     label: 'Thông tin dự thi', wide: true, children: [
