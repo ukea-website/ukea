@@ -9,6 +9,7 @@
     "db:verify": "node scripts/verify-supabase.mjs"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "dotenv": "^18.0.1",
     "postgres": "^3.4.9"
   }
