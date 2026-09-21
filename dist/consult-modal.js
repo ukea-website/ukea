@@ -7,6 +7,7 @@ window.UkeaLeadApi = window.UkeaLeadApi || {
     const submitButton = form.querySelector('[type="submit"]');
     const originalLabel = submitButton?.textContent;
     const data = new FormData(form);
+    const query = new URLSearchParams(window.location.search);
     const payload = {
       fullName: data.get('fullName'),
       phone: data.get('phone'),
@@ -16,6 +17,13 @@ window.UkeaLeadApi = window.UkeaLeadApi || {
       source,
       pageUrl: window.location.href,
       website: data.get('website') || '',
+      message: data.get('message') || '',
+      testType: data.get('testType') || '',
+      utmSource: query.get('utm_source') || '',
+      utmMedium: query.get('utm_medium') || '',
+      utmCampaign: query.get('utm_campaign') || '',
+      utmContent: query.get('utm_content') || '',
+      utmTerm: query.get('utm_term') || '',
     };
 
     if (submitButton) {

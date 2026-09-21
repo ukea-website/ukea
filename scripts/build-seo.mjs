@@ -149,6 +149,10 @@ await Promise.all([
   fs.writeFile(path.join(dist, 'robots.txt'), robots),
   fs.writeFile(path.join(dist, 'sitemap.xml'), sitemap),
   fs.writeFile(path.join(dist, 'site.webmanifest'), `${JSON.stringify(manifest, null, 2)}\n`),
+  fs.mkdir(path.join(dist, 'admin'), { recursive: true }).then(() => Promise.all([
+    fs.copyFile(path.join(root, 'node_modules', 'quill', 'dist', 'quill.js'), path.join(dist, 'admin', 'quill.js')),
+    fs.copyFile(path.join(root, 'node_modules', 'quill', 'dist', 'quill.snow.css'), path.join(dist, 'admin', 'quill.snow.css')),
+  ])),
 ]);
 
 console.log(`SEO build complete: ${PAGES.length} pages, robots.txt, sitemap.xml and manifest generated.`);

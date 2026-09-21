@@ -27,7 +27,8 @@ const navigation = [
 ];
 
 const currentPage = location.pathname.split('/').pop() || 'index.html';
-const hasCurrent = item => item.href?.split('#')[0] === currentPage || item.children?.some(hasCurrent);
+const isNewsDetail = location.pathname.startsWith('/tin-tuc/');
+const hasCurrent = item => (isNewsDetail && item.label === 'Tin tức') || item.href?.split('#')[0] === currentPage || item.children?.some(hasCurrent);
 const escapeHtml = value => value.replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
 const link = item => `<a href="${item.href}"${hasCurrent(item) ? ' aria-current="page"' : ''}>${escapeHtml(item.label)}</a>`;
 const desktopItem = (item, index) => item.children ? `<li class="nav-item has-menu${hasCurrent(item) ? ' is-current' : ''}"><button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel-${index}"><span>${escapeHtml(item.label)}</span><svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div class="dropdown${item.wide ? ' is-wide' : ''}" id="nav-panel-${index}" role="group"><div class="dropdown-list">${item.children.map(link).join('')}</div></div></li>` : `<li class="nav-item${hasCurrent(item) ? ' is-current' : ''}">${link(item)}</li>`;

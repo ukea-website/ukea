@@ -7,6 +7,7 @@
   <meta name="description" content="Cập nhật thông tin, thông báo và hướng dẫn chuẩn bị cho Oxford Test of English, từ lựa chọn bài thi đến quy định và cách thức đăng ký.">
     <title>Tin tức và Thông báo Oxford Test of English | UKEA</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="news.css?v=20260921">
   <!-- SEO:START -->
   <link rel="canonical" href="https://ukea.com.vn/tin-tuc">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -36,24 +37,17 @@
     <section class="content-hero">
       <div class="eyebrow">CẬP NHẬT</div>
       <h1>Tin tức &amp; thông báo</h1>
-      <p>Các thông báo về lịch thi, lệ phí, địa điểm và hoạt động được đăng tải trên website chính thức của UKTA.</p>
+      <p>Cập nhật thông báo, hoạt động và hướng dẫn chuẩn bị cho kỳ thi Oxford Test of English.</p>
     </section>
-    <article class="section article">
-      <div class="faq">
-        <details open>
-          <summary>Thông tin nào nên kiểm tra trước khi đăng ký?</summary>
-          <p>Hãy xác nhận lịch thi, địa điểm, lệ phí hiện hành, giấy tờ cần thiết và chính sách của trung tâm tổ chức thi.</p>
-        </details>
-        <details>
-          <summary>Nguồn thông tin chính thức</summary>
-          <p>UKTA là đối tác độc quyền của Oxford University Press tại Việt Nam trong việc phân phối các bài thi cấp chứng chỉ OTE. Liên kết bên dưới đưa bạn đến trang tin tức của UKTA.</p>
-        </details>
+    <section class="section cms-news-page" aria-labelledby="news-list-title">
+      <h2 id="news-list-title" class="sr-only">Danh sách tin tức</h2>
+      <div class="cms-news-filters" aria-label="Lọc theo danh mục">
+        <button class="is-active" type="button" data-news-filter="" aria-pressed="true">Tất cả</button>
+        <button type="button" data-news-filter="thong-bao" aria-pressed="false">Thông báo</button>
+        <button type="button" data-news-filter="hoat-dong-su-kien" aria-pressed="false">Hoạt động – Sự kiện</button>
       </div>
-      <div class="hero-buttons left">
-        <a class="primary" target="_blank" rel="noopener" href="https://ukta.edu.vn/tin-tuc/">Xem tin tức UKTA ↗</a>
-        <a class="secondary" href="cach-dang-ky.html">Cách thức đăng ký</a>
-      </div>
-    </article>
+      <div class="cms-news-grid" data-cms-news-list data-limit="12" aria-live="polite"></div>
+    </section>
   </main>
   <div id="site-footer"></div>
   <script src="site-v3.js"></script>
@@ -61,5 +55,6 @@
   <script src="consult-modal.js"></script>
   <script src="home-locations.js"></script>
   <script src="header-contact.js"></script>
+  <script src="news.js"></script>
 </body>
 </html>

@@ -5,6 +5,9 @@ const MAX_LENGTHS = {
   interest: 120,
   source: 80,
   pageUrl: 500,
+  message: 2000,
+  testType: 120,
+  utm: 160,
 };
 
 const clean = (value, maxLength) => String(value ?? '').trim().slice(0, maxLength);
@@ -28,6 +31,7 @@ export default async function handler(request, response) {
   const supabaseKey = process.env.UKEA_SUPABASE_PUBLISHABLE_KEY
     || process.env.NEXT_PUBLIC_UKEA_SUPABASE_PUBLISHABLE_KEY
     || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  const serviceKey = process.env.UKEA_SUPABASE_SERVICE_ROLE_KEY || process.env.UKEA_SUPABASE_SECRET_KEY;
 
   if (!supabaseUrl || !supabaseKey) {
     return json(response, 503, { ok: false, message: 'Hệ thống lưu dữ liệu chưa được cấu hình.' });
@@ -54,7 +58,15 @@ export default async function handler(request, response) {
     interest: clean(body.interest, MAX_LENGTHS.interest) || 'Chưa xác định',
     source: clean(body.source, MAX_LENGTHS.source) || 'website',
     page_url: clean(body.pageUrl, MAX_LENGTHS.pageUrl) || null,
+    message: clean(body.message, MAX_LENGTHS.message) || null,
+    test_type: clean(body.testType, MAX_LENGTHS.testType) || null,
+    utm_source: clean(body.utmSource, MAX_LENGTHS.utm) || null,
+    utm_medium: clean(body.utmMedium, MAX_LENGTHS.utm) || null,
+    utm_campaign: clean(body.utmCampaign, MAX_LENGTHS.utm) || null,
+    utm_content: clean(body.utmContent, MAX_LENGTHS.utm) || null,
+    utm_term: clean(body.utmTerm, MAX_LENGTHS.utm) || null,
     consent: body.consent === true,
+    status: 'new',
   };
 
   if (!lead.full_name || !lead.phone || !lead.consent) {
@@ -70,6 +82,22 @@ export default async function handler(request, response) {
   }
 
   try {
+    if (serviceKey) {
+      const duplicateSince = new Date(Date.now() - 3 * 60 * 1000).toISOString();
+      const duplicateQuery = new URLSearchParams({
+        select: 'id',
+        phone: `eq.${lead.phone}`,
+        created_at: `gte.${duplicateSince}`,
+        limit: '1',
+      });
+      const duplicate = await fetch(`${supabaseUrl.replace(/\/$/, '')}/rest/v1/consultation_leads?${duplicateQuery}`, {
+        headers: { apikey: serviceKey, Authorization: `Bearer ${serviceKey}` },
+      });
+      if (duplicate.ok && (await duplicate.json()).length) {
+        return json(response, 200, { ok: true, message: 'Đăng ký đã được ghi nhận.' });
+      }
+    }
+
     const result = await fetch(`${supabaseUrl.replace(/\/$/, '')}/rest/v1/consultation_leads`, {
       method: 'POST',
       headers: {

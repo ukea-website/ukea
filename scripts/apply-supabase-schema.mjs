@@ -13,11 +13,20 @@ if (!connectionString) {
 
 const schemaUrl = new URL('../supabase/schema.sql', import.meta.url);
 const schema = await fs.readFile(fileURLToPath(schemaUrl), 'utf8');
+const migrationsDirectory = fileURLToPath(new URL('../supabase/migrations/', import.meta.url));
 const sql = postgres(connectionString, { ssl: 'require', max: 1 });
 
 try {
   await sql.unsafe(schema);
-  console.log('Supabase schema is ready: public.consultation_leads');
+  const migrationFiles = (await fs.readdir(migrationsDirectory))
+    .filter(file => file.endsWith('.sql'))
+    .sort();
+  for (const migrationFile of migrationFiles) {
+    const migration = await fs.readFile(new URL(`../supabase/migrations/${migrationFile}`, import.meta.url), 'utf8');
+    await sql.unsafe(migration);
+    console.log(`Applied migration: ${migrationFile}`);
+  }
+  console.log('Supabase schema is ready for leads and the UKEA CMS.');
 } finally {
   await sql.end();
 }

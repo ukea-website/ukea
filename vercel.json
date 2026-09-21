@@ -5,6 +5,12 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/api/sitemap" },
+    { "source": "/tin-tuc/:slug", "destination": "/api/news-page?slug=:slug" },
+    { "source": "/quan-tri", "destination": "/api/admin-page?path=" },
+    { "source": "/quan-tri/(.*)", "destination": "/api/admin-page?path=$1" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
