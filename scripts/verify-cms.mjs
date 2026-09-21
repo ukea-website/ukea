@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import dotenv from 'dotenv';
+import adminApiHandler from '../api/admin-api.js';
 import adminPageHandler from '../api/admin-page.js';
-import adminLoginHandler from '../api/admin/login.js';
 
 dotenv.config({ path: '.env.local', quiet: true });
 
@@ -56,7 +56,7 @@ try {
   assert.equal(profileCreate.response.ok, true, 'Create editor profile failed');
 
   const loginResponse = mockResponse();
-  await adminLoginHandler({ method: 'POST', headers: { host: 'localhost', origin: 'http://localhost' }, body: { email, password } }, loginResponse);
+  await adminApiHandler({ method: 'POST', headers: { host: 'localhost', origin: 'http://localhost' }, query: { action: 'login' }, body: { email, password } }, loginResponse);
   assert.equal(loginResponse.statusCode, 200, `Admin login handler failed: ${loginResponse.body}`);
   assert.equal(Array.isArray(loginResponse.headers['set-cookie']), true, 'Admin login did not set Supabase session cookies');
   const sessionCookie = loginResponse.headers['set-cookie'].map(value => value.split(';')[0]).join('; ');

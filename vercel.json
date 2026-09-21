@@ -8,6 +8,7 @@
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/sitemap" },
     { "source": "/tin-tuc/:slug", "destination": "/api/news-page?slug=:slug" },
+    { "source": "/api/admin/(.*)", "destination": "/api/admin-api?action=$1" },
     { "source": "/quan-tri", "destination": "/api/admin-page?path=" },
     { "source": "/quan-tri/(.*)", "destination": "/api/admin-page?path=$1" }
   ],
