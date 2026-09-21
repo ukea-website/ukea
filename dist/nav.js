@@ -7,7 +7,6 @@ const navigation = [
       { label: 'Oxford Test of English Advanced', href: 'ote-advanced.html' },
       { label: 'So sánh các bài thi', href: 'so-sanh.html' },
       { label: 'Kết quả & Chứng chỉ', href: 'ket-qua-chung-chi.html' },
-      { label: 'Công nhận quốc tế', href: 'index.html#main' },
       { label: 'Bài thi mẫu', href: 'bai-thi-mau.html' }]
   },
   {
