@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { PAGES, SITE, SITEMAP_LAST_MODIFIED } from '../seo/site-config.mjs';
+import { PAGES, SITE } from '../seo/site-config.mjs';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
@@ -122,17 +122,6 @@ Disallow: /quan-tri/
 Sitemap: ${SITE.url}/sitemap.xml
 `;
 
-const sitemapEntries = PAGES.map(page => `  <url>
-    <loc>${SITE.url}${page.path}</loc>
-    <lastmod>${SITEMAP_LAST_MODIFIED}</lastmod>
-  </url>`).join('\n');
-
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries}
-</urlset>
-`;
-
 const manifest = {
   name: SITE.name,
   short_name: 'UKEA',
@@ -147,7 +136,6 @@ const manifest = {
 
 await Promise.all([
   fs.writeFile(path.join(dist, 'robots.txt'), robots),
-  fs.writeFile(path.join(dist, 'sitemap.xml'), sitemap),
   fs.writeFile(path.join(dist, 'site.webmanifest'), `${JSON.stringify(manifest, null, 2)}\n`),
   fs.mkdir(path.join(dist, 'admin'), { recursive: true }).then(() => Promise.all([
     fs.copyFile(path.join(root, 'node_modules', 'quill', 'dist', 'quill.js'), path.join(dist, 'admin', 'quill.js')),
@@ -155,4 +143,4 @@ await Promise.all([
   ])),
 ]);
 
-console.log(`SEO build complete: ${PAGES.length} pages, robots.txt, sitemap.xml and manifest generated.`);
+console.log(`SEO build complete: ${PAGES.length} pages, robots.txt, dynamic sitemap config and manifest generated.`);

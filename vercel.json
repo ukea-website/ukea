@@ -5,6 +5,14 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.ukea.com.vn" }],
+      "destination": "https://ukea.com.vn/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/sitemap" },
     { "source": "/tin-tuc/:slug", "destination": "/api/news-page?slug=:slug" },

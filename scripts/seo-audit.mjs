@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { PAGES, SITE } from '../seo/site-config.mjs';
+import { createSitemapXml } from '../lib/server/sitemap.js';
 
 const dist = path.join(process.cwd(), 'dist');
 const errors = [];
@@ -51,10 +52,8 @@ for (const page of PAGES) {
   }
 }
 
-const [robots, sitemap] = await Promise.all([
-  fs.readFile(path.join(dist, 'robots.txt'), 'utf8'),
-  fs.readFile(path.join(dist, 'sitemap.xml'), 'utf8'),
-]);
+const robots = await fs.readFile(path.join(dist, 'robots.txt'), 'utf8');
+const sitemap = createSitemapXml([]);
 
 if (!robots.includes(`Sitemap: ${SITE.url}/sitemap.xml`)) errors.push('robots.txt: invalid sitemap URL');
 if (!robots.includes('Disallow: /quan-tri')) errors.push('robots.txt: admin rule missing');
@@ -64,6 +63,7 @@ for (const page of PAGES) {
 }
 
 if (/vercel\.app|localhost|\/api\/|\/quan-tri/.test(sitemap)) errors.push('sitemap.xml: contains a forbidden URL');
+if (await fs.access(path.join(dist, 'sitemap.xml')).then(() => true).catch(() => false)) errors.push('sitemap.xml: static file must not shadow the dynamic sitemap API');
 
 if (errors.length) {
   console.error(`SEO audit failed with ${errors.length} issue(s):`);
